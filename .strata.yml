@@ -1,0 +1,10 @@
+pipeline_template: utest-only/Jenkinsfile-1
+email_reply_to: scmadmin@salesforce.com     # Change this to your group's e-mail address!
+# time_out_mins: 180                                # (Optional default shown
+compliance_required: true                         # (Optional) default shown
+number_of_builds_to_keep: 30                      # (Optional) default shown, value allowed <= 350
+docker_test_images:                                 # The image(s) that will be used to run your unit tests (Unit tests will be run against each image)
+    - dva/sfdc_centos7_jdk8
+unit_tests_command: hostname                       # The command we'll run for the unit tests stage
+# unit_tests_mount_point: /tmp/project              # (Optional) default shown
+# email_only_last_committer_on_dev_branch: false    # (Optional) default shown
